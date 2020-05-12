@@ -12,7 +12,9 @@ app.use(express.static(path.join(__dirname,'public')));
 //run when aclien connects
 
 io.on('connection',socket=> {
-    console.log('new ws connection.....');
+    console.log('new ws connection..... ');
+
+    socket.emit('message','welcome to chatcord');
 })
 
 const PORT = 3000 || process.env.PORT;
