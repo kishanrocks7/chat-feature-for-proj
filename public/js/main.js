@@ -13,5 +13,13 @@ chatForm.addEventListener('submit' , (e) =>{
   //get message text
   const msg =e.target.elements.msg.value;
 //emitting a message to server
-  socket.emit('cahtMessage',msg);
+  socket.emit('chatMessage',msg);
 });
+
+//output mesaage to DOM
+
+function outputMessage(message) {
+  const div = document.createElement('div');
+  div.classList.add('message');
+  div.innerHTML = ""
+}
