@@ -19,7 +19,7 @@ io.on('connection',socket=> {
 socket.broadcast.emit('message','a user has joined the chat');
 
 
-socket.on('discount',( )=> {
+socket.on('disconnect',()=> {
   io.emit('message','a user has left the chat');
 });
 
