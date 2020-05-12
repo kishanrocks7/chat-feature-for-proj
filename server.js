@@ -15,7 +15,15 @@ io.on('connection',socket=> {
     console.log('new ws connection..... ');
 
     socket.emit('message','welcome to chatcord');
-})
+//brodcast when a user connects
+socket.broadcast.emit('message','a user has joined the chat');
+
+
+socket.on('discount',( )=> {
+  io.emit('message','a user has left the chat');
+});
+
+  });
 
 const PORT = 3000 || process.env.PORT;
 

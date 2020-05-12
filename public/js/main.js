@@ -1,5 +1,8 @@
-const socket=io();
+const chatForm = document.getElementById('chat-form')
+const socket = io();
 
-socket.on('messagee',message=>{
+socket.on('message',message=>{
   console.log(message);
 });
+
+//message submit
