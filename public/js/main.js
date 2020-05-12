@@ -6,3 +6,12 @@ socket.on('message',message=>{
 });
 
 //message submit
+chatForm.addEventListener('submit' , (e) =>{
+  e.preventDefault();
+
+
+  //get message text
+  const msg =e.target.elements.msg.value;
+//emitting a message to server
+  socket.emit('cahtMessage',msg);
+});
