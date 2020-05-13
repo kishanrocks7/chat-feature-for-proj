@@ -5,6 +5,7 @@ const app=express();
 const socketio=require('socket.io');
 const server=http.createServer(app);
 const io=socketio(server);
+const formatMessage=require('./utils/messages');
 //set static folder
 
 app.use(express.static(path.join(__dirname,'public')));
@@ -14,7 +15,7 @@ app.use(express.static(path.join(__dirname,'public')));
 io.on('connection',socket=> {
     console.log('new ws connection..... ');
 
-    socket.emit('message','welcome to chatcord');
+    socket.emit('message',formatMessage{botname,'welcome to chatcord'});
 //brodcast when a user connects
 socket.broadcast.emit('message','a user has joined the chat');
 
