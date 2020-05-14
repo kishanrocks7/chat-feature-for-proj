@@ -23,7 +23,7 @@ var MeetingUser = require("./models/meetinguser");
 // Routes
 var webinarRoutes   = require("./routes/webinar"),
     meetingRoutes    = require("./routes/meeting"),
-    classroomRoutes= require("./routes/classroom");
+    classroomRoutes= require("./routes/classroom"),
     profileRoutes = require("./routes/profile");
 
 
@@ -326,6 +326,7 @@ app.use("/meeting",meetingRoutes);
 app.use("/webinar",webinarRoutes);
 app.use("/classroom",classroomRoutes);
 app.use("/profile", profileRoutes);
+
 
 app.listen(5000,function(){
     console.log("The Server is running at port 5000");
